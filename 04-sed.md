@@ -514,10 +514,14 @@ Si può anche usare il comando sed per rimuovere contemporaneamente gli spazi bi
 sed 's/^[ \t]*//;s/[ \t]*$//' whitespace.txt
 ```
 
-### Creazione di offset di pagina con SED
+### Inversione delle linee di input
 
-Se si dispone di un file di grandi dimensioni con padding frontali nulli, è possibile creare degli offset di pagina. Gli offset di pagina sono semplicemente spazi bianchi iniziali che aiutano a leggere le righe di input senza problemi. Il comando seguente crea un offset di 5 spazi bianchi.
+Il comando seguente mostra come utilizzare sed per invertire l'ordine delle righe in un file di input. Emula il comportamento del comando Linux
+tac.
 
 ```bash
-sed 's/^/ /' input-file
+sed '1!G;h;$!d' input-file
 ```
+
+Questo comando inverte le righe del documento di input.
+
