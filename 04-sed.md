@@ -525,3 +525,87 @@ sed '1!G;h;$!d' input-file
 
 Questo comando inverte le righe del documento di input.
 
+### Inversione dei caratteri in input
+
+Si può anche usare l'utilità sed per invertire i caratteri delle righe di input. Questo invertirà l'ordine di ogni carattere consecutivo nel flusso di input.
+
+```bash
+sed '/\n/!G;s/\(.\)\(.*\n\)/&\2\1/;//D;s/.//' input-file
+```
+
+Questo comando emula il comportamento del comando rev di Linux. È possibile verificarlo eseguendo il comando seguente dopo quello precedente.
+
+```bash
+rev input-file
+```
+
+### Stampa di righe contenenti un numero specifico di caratteri
+
+È molto semplice stampare le righe in base al numero di caratteri. Il semplice comando seguente stampa le righe che contengono 15 o più caratteri.
+
+```bash
+sed -n '/^.\{15\}/p' input-file
+```
+
+Utilizzare il comando seguente per stampare le righe con meno di 20 caratteri.
+
+```bash
+sed -n '/^.\{20\}/!p' input-file
+```
+
+È possibile farlo anche in modo più semplice, utilizzando il metodo seguente.
+
+```bash
+sed '/^.\{20\}/d' input-file
+```
+
+### Eliminazione di righe doppie
+
+Il seguente esempio di sed ci mostra come emulare il comportamento del comando uniq di Linux. Esso elimina due righe consecutive duplicate dall'input.
+
+```bash
+sed '$!N; /^\(.*\)\n\1$/!P; D' input-file
+```
+
+Tuttavia, sed non può eliminare tutte le righe duplicate se l'input non è ordinato. Anche se è possibile ordinare il testo usando il comando sort e poi collegare l'output a sed usando una pipe, questo cambierà l'orientamento delle righe.
+
+### Eliminazione di tutte le righe vuote
+
+Se il vostro file di testo contiene molte righe vuote non necessarie, potete eliminarle usando l'utilità sed. Il comando seguente ne è una dimostrazione.
+
+```bash
+sed '/^$/d' input-file
+sed '/./!d' input-file
+```
+
+### Eliminazione delle ultime righe dei paragrafi
+
+È possibile eliminare l'ultima riga di tutti i paragrafi utilizzando il seguente comando sed. Per questo esempio utilizzeremo un nome di file fittizio. Sostituitelo con il nome di un file reale che contiene alcuni paragrafi.
+
+```bash
+sed -n '/^$/{p;h;};/./{x;/./p;}' paragraphs.txt
+```
+
+### Visualizzazione Help Page
+
+La pagina di aiuto contiene informazioni sintetiche su tutte le opzioni disponibili e sull'uso del programma sed. È possibile richiamarla utilizzando la seguente sintassi.
+
+```bash
+sed --help
+```
+
+### Visualizzazione man page
+
+```bash
+man sed
+```
+
+### Visualizzazione delle informazioni sulla versione
+
+```bash
+sed --version
+```
+
+### Pensieri conclusivi
+
+> Il comando sed è uno degli strumenti di manipolazione del testo più utilizzati dalle distribuzioni Linux. È uno dei tre strumenti di filtraggio principali di Unix, insieme a grep e awk. Abbiamo descritto un po' di esempi semplici ma utili per aiutavi a iniziare a utilizzare questo straordinario strumento. Vi raccomando di provare personalmente questi comandi per ottenere informazioni pratiche. Inoltre, provate a modificare gli esempi forniti qui ed esaminatene gli effetti. Questo vi aiuterà a padroneggiare rapidamente Sed.
