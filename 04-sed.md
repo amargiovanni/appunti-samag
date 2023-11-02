@@ -610,4 +610,6 @@ sed --version
 
 > Il comando sed è uno degli strumenti di manipolazione del testo più utilizzati dalle distribuzioni Linux. È uno dei tre strumenti di filtraggio principali di Unix, insieme a grep e awk. Abbiamo descritto un po' di esempi semplici ma utili per aiutavi a iniziare a utilizzare questo straordinario strumento. Vi raccomando di provare personalmente questi comandi per ottenere informazioni pratiche. Inoltre, provate a modificare gli esempi forniti qui ed esaminatene gli effetti. Questo vi aiuterà a padroneggiare rapidamente Sed.
 
-Qui un playground: [https://sed.js.org](https://sed.js.org)
+- Qui un playground: [https://sed.js.org](https://sed.js.org)
+
+- Qui esercizi: [https://github.com/amargiovanni/exercises/tree/main/SedExercises](https://github.com/amargiovanni/exercises/tree/main/SedExercises)
