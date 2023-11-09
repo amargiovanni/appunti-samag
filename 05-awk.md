@@ -1,6 +1,6 @@
 # AWK
 
-Ecco 10 esempi di come usare `awk` in un ambiente Unix-like, con spiegazioni dettagliate. `awk` è un potente linguaggio di scripting utilizzato per manipolare dati e generare report. È particolarmente utile per processare testo basato su pattern e supporta la programmazione procedurale.
+`awk` è un potente linguaggio di scripting utilizzato per manipolare dati e generare report. È particolarmente utile per processare testo basato su pattern e supporta la programmazione procedurale.
 
 ### Esempio 1: Stampare Colonne Specifiche
 
