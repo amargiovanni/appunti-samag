@@ -2,11 +2,11 @@
 
 Il branching model Git-flow è un approccio alla gestione dei rami (branch) in un repository Git che offre una struttura ben definita per organizzare lo sviluppo di un progetto software. È stato creato da Vincent Driessen ed è diventato molto popolare nell'ambito dello sviluppo software per la sua chiara organizzazione dei rami e delle attività di sviluppo. Il modello Git-flow è basato su due rami principali: `master` e `develop`, e introduce rami ausiliari per gestire le feature, le hotfix e le release.
 
-### Master Branch
-Il ramo `master` rappresenta la linea di produzione stabile del software. Ogni commit in questo ramo dovrebbe rappresentare una versione stabile del software pronto per il rilascio.
+### Main Branch
+Il ramo `main` rappresenta la linea di produzione stabile del software. Ogni commit in questo ramo dovrebbe rappresentare una versione stabile del software pronto per il rilascio.
 
 ### Develop Branch
-Il ramo `develop` rappresenta la linea di sviluppo principale. È da questo ramo che vengono create tutte le feature, le hotfix e le release. È un ramo in cui si lavora costantemente per sviluppare nuove funzionalità.
+Il ramo `develop` rappresenta la linea di sviluppo principale. È da questo ramo che vengono create tutte le feature e le release. È un ramo in cui si lavora costantemente per sviluppare nuove funzionalità.
 
 ### Feature Branches
 Quando un nuovo lavoro o una nuova funzionalità deve essere sviluppato, viene creato un "feature branch" da `develop`. Questo ramo è specifico per la nuova funzionalità e permette ai membri del team di lavorare su di essa senza influire sulla stabilità del ramo `develop`. Una volta completata la funzionalità, il branch della feature viene riunito in `develop`.

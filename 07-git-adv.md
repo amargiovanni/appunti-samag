@@ -287,4 +287,4 @@ git cherry-pick 123abc
 git reset --hard 123abc
 ```
 
-Per ogni esercizio, gli SHA dei commit, i nomi dei branch e gli URL dei repository dovranno essere sostituiti con i valori corrispondenti al tuo ambiente e alla tua cronologia dei commit. Ricorda di eseguire questi esercizi in un repository di test per evitare di modificare la cronologia di commit in un progetto reale.
+Per ogni esercizio, gli SHA dei commit, i nomi dei branch e gli URL dei repository dovranno essere sostituiti con i valori corrispondenti al tuo ambiente e alla tua cronologia dei commit. Ricorda di eseguire questi esercizi in un repository di test per evitare di modificare la cronologia di commit in un progetto reale. 
