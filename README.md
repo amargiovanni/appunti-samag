@@ -1,1 +1,1 @@
-# appunti-samag
+# basic dev skills
